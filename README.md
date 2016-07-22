@@ -12,6 +12,7 @@ Our chemical balencer currently balences only basic reactions where we know the 
  H2O + CO2 --> H2CO3
  The solution to this question would be:
  -->: 2H2O + CO2 ---> H2CO3
-This is the concept that we are trying to implement using our version of a chemical reaction balancer.
-
+ 
 We try to balence other types of reaction in a similar light. To sum up the average rate of success for this style of balancing goes up to 80%. We are continously coming up with new ways and finding newer APIs to utlize in our efforts to balence chemical reactions.
+
+For more information regarding this application, refer to the PDF document included in this repository.
