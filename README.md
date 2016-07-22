@@ -1,4 +1,4 @@
-# Kathematic
+# Kathematics
 
 This is an android application that is aimed towards Chemistry students to help them balance chemical reactions.
 
