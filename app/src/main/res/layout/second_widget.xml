@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09C"
+    android:id="@+id/second_widget"
+    android:padding="@dimen/widget_margin"
+    android:gravity="center"
+    android:textAlignment="center">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_marginRight="5dp"
+            android:animationResolution="100"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            />
+        <TextView
+            android:id="@+id/appwidget_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#09C"
+            android:contentDescription="@string/appwidget_text"
+            android:text="@string/appwidget_text"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balence"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/button"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[a w a i t i n g  d e s t i n y]"
+            android:textColor="#f4e808"
+            android:textSize="28dp"
+            android:textStyle="bold|italic"
+            android:id="@+id/retriver"
+            />
+    </LinearLayout>
+</RelativeLayout>

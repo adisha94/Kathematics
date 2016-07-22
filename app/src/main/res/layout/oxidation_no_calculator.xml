@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:foregroundGravity="top|left|right"
+    android:foreground="#dc97e5f1"
+    android:foregroundTint="#59ee45">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oxidation Number Calculator"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/Title" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:inputType="textMultiLine"
+            android:hint="Input formula for calculations"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Main Screen"
+                android:id="@+id/home_Screen" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Calculate"
+                android:textAlignment="center"
+                android:onClick="Calculate_Oxidation_Numbers_For_Formula"
+                android:id="@+id/oxidation_button" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Oxidation_Result"
+            android:gravity="center"
+            android:hapticFeedbackEnabled="true"
+            android:enabled="false"
+            android:text="[a w a i t i n g  d s t i n y ]"
+            android:focusableInTouchMode="false"
+            android:shadowColor="#ff0d0d"
+            android:textColor="#0b0000"
+            android:textColorHighlight="#88ffff"
+            android:textAlignment="center"
+            android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

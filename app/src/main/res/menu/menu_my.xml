@@ -1,0 +1,40 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kathaMain.adish.tutorial.MyActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id = "@+id/secondOption"
+        android:orderInCategory="101"
+        android:title="Balance Mode"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id = "@+id/Reaction_Types"
+        android:orderInCategory="103"
+        android:title="Reaction Type"
+        app:showAsAction = "never"
+        />
+
+    <item
+        android:id = "@+id/oxidation_Numbers"
+        android:orderInCategory="104"
+        android:title="Oxidation Number Calculator"
+        app:showAsAction = "never"
+        />
+
+    <item
+        android:id = "@+id/Exit"
+        android:orderInCategory="104"
+        android:title="Exit"
+        app:showAsAction = "never"
+        />
+
+</menu>

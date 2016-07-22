@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kathematics</string>
+    <string name="action_settings">Settings</string>
+    <string name="projectshortform">Ka</string>
+    <string name="projectname">Kathematics</string>
+    <string name="hint">Input Eq. or Symbol</string>
+    <string name="explaination">CS-146 Group 1</string>
+    <string name="appwidget_text">From App</string>
+    <string name="add_widget">Add widget</string>
+    <string name="balence">balance</string>
+    <!--<string name="equals"> &ndash;&gt; </string>-->
+</resources>
