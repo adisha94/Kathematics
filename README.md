@@ -1,5 +1,5 @@
 # Kathematics
-
+Formally known as Chem-Ram-Alpha
 This is an android application that is aimed towards Chemistry students to help them balance chemical reactions.
 
 # Introduction:
