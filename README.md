@@ -23,4 +23,3 @@ To sum up the average rate of success for this style of balancing goes up to 80%
 - Balancing Redox reactions returning incorrect answers
 - Combustion reactions not working out.
 - Android version does not have database for element reference
-- Flipping phone into landscape mode causes app to crash
