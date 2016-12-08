@@ -1,12 +1,11 @@
 # Kathematics
-Formally known as Chem-Ram-Alpha
-This is an android application that is aimed towards Chemistry students to help them balance chemical reactions.
+This is an android application that aims to become the chemistry student's best friend.
 
 # Introduction:
-The application uses the concepts of matrices, HashMaps, and other datastructures when trying to balence chemical reactions. After searching the web for possible solutions for APIs regarding this application.
+The application uses the concepts of matrices, HashMaps, and other datastructures when trying to balence chemical reactions.
 
 # Process:
-Our chemical balancer currently balences only basic reactions where we know the reactants and the products.
+Our chemical balancer currently balences only applies to basic reactions where we know the reactants and the products.
  
 # Example:
  H2O + CO2 --> H2CO3
