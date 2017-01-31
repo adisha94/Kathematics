@@ -175,7 +175,7 @@ public class ChemicalBalancer
         }
         mat.reducedRowEchelonForm();
         boolean unableToBalance = false;
-        LinkedList<Integer> balancedValues = new LinkedList<>();
+        LinkedList<Integer> balancedValues = new LinkedList<>(); // this contains the new coefficients for the chemicals involved
 
         int[] lcm = new int[terms.size() - 1];
         for (int i = 0; i < terms.size() - 1; i++)

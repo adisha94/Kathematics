@@ -83,8 +83,8 @@ public class MyActivity extends AppCompatActivity
                 // secondary check
                 if (message.isEmpty())
                 {
-                    Toast.makeText(getApplicationContext(), "Nothing has been" +
-                            "inputted into the field", Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplicationContext(), "Note: " +
+                            "no Input Detected", Toast.LENGTH_SHORT);
                     result.setEnabled(false);
                     return true;
                 }
@@ -124,6 +124,7 @@ public class MyActivity extends AppCompatActivity
          */
         mainButton.setOnClickListener(new View.OnClickListener()
         {
+        	// This is for the sample problem
             @Override
             public void onClick(View v) {
                 // activate the balence method
@@ -187,9 +188,6 @@ public class MyActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
