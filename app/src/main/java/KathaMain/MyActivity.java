@@ -20,22 +20,6 @@ import com.kathaMain.adish.tutorial.R;
 
 public class MyActivity extends AppCompatActivity
 {
-
-    private int ProgressStatus;
-    private ProgressBar progress;
-//    private Handler mHandler = new Handler() {
-//        @Override
-//        public void close() {
-//        }
-//
-//        @Override
-//        public void flush() {
-//        }
-//
-//        @Override
-//        public void publish(LogRecord record) {
-//        }
-//    };
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -44,12 +28,8 @@ public class MyActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         // buttons on the front end view of the activity
         // for both portrait and landscape
-        progress = (ProgressBar) findViewById(R.id.progress_bar);
-        progress.setMax(200);
-        progress.setVisibility(View.INVISIBLE);
         Button mainButton = (Button) findViewById(R.id.mainButton); // the main button pressed to activate the balence method
         final TextView result = (TextView) findViewById(R.id.Result); // mini display console
         final EditText inputField = (EditText) findViewById(R.id.inputBox); // the google button box
@@ -57,7 +37,6 @@ public class MyActivity extends AppCompatActivity
         final Button clearButton = (Button) findViewById(R.id.clear);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        progress.setIndeterminate(true); // instantiating the progress bar so that it remains empty to begin with
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
