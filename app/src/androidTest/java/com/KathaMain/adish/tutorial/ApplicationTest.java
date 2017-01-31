@@ -1,4 +1,4 @@
-package com.kathaMain.adish.tutorial;
+package com.KathaMain.adish.tutorial;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
