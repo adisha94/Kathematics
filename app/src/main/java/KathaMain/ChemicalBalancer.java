@@ -19,7 +19,7 @@ public class ChemicalBalancer
         {
             char ch = tokens[i].charAt(0); //Verify it is not a symbol.
             String term = tokens[i];
-            if (ch == '=' || term.compareTo("->") == 0)
+            if (ch == '=' || term.compareTo("->") == 0) // we need to review this portion for cases of '-->' or '<-->'
             {
                 leftSide = false;
                 hasEqualSign = true;

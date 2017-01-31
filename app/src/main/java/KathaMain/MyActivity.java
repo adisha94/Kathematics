@@ -226,7 +226,7 @@ public class MyActivity extends AppCompatActivity
         String message = "balence equation " + inputField.getText().toString();
         if (message.contains("empty") || message.contains("Empty"))
         {
-            Toast.makeText(MyActivity.this, "Testing the toast feature of the app. ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyActivity.this, "Use this button search google for an in-depth analysis about the element. ", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -236,11 +236,4 @@ public class MyActivity extends AppCompatActivity
         }
     }
 
-
-//
-//    public ProgressBar instantiateProgressBar(ProgressBar po)
-//    {
-//        ProgressBar customProgress = po;
-//        return customProgress;
-//    }
 }
