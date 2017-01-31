@@ -97,7 +97,7 @@ public class MyActivity extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(MyActivity.this, ChemicalBalancer.balanceEquation(message, progress), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MyActivity.this, ChemicalBalancer.balanceEquation(message), Toast.LENGTH_SHORT).show();
                     return true;
                 }
 
@@ -113,8 +113,6 @@ public class MyActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
-                progress.setVisibility(View.INVISIBLE);
                 inputField.setText("");
                 result.setText("[]");
             }
@@ -165,7 +163,7 @@ public class MyActivity extends AppCompatActivity
                 else
                 {
                     result.setTextSize(20);
-                    result.setText(ChemicalBalancer.balanceEquation(message, progress));
+                    result.setText(ChemicalBalancer.balanceEquation(message));
                 }
                 // test now
             }

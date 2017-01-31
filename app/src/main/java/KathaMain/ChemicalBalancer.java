@@ -1,6 +1,4 @@
 package KathaMain;
-import android.view.View;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
