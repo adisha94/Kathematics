@@ -16374,15 +16374,10 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.chemspider.com/",
                 "ResolveInChIKey",
-                "ns1");
-
-            
-
+                "ns1");         
                         /**
                         * field for Inchi_key
-                        */
-
-                        
+                        */                        
                                     protected java.lang.String localInchi_key ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -16394,9 +16389,7 @@
                            public boolean isInchi_keySpecified(){
                                return localInchi_keyTracker;
                            }
-
                            
-
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
@@ -16404,9 +16397,7 @@
                            public  java.lang.String getInchi_key(){
                                return localInchi_key;
                            }
-
-                           
-                        
+        
                             /**
                                * Auto generated setter method
                                * @param param Inchi_key
@@ -16415,8 +16406,6 @@
                             localInchi_keyTracker = param != null;
                                    
                                             this.localInchi_key=param;
-                                    
-
                                }
                             
 

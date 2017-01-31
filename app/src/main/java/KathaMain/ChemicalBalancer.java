@@ -1,6 +1,5 @@
 package KathaMain;
 import android.view.View;
-import android.widget.ProgressBar;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -9,17 +8,13 @@ import java.util.LinkedList;
 
 public class ChemicalBalancer
 {
-    public static String balanceEquation(String input, ProgressBar progress)
+    public static String balanceEquation(String input)
     {
         String[] tokens = input.split("\\s+");
         HashMap<String, Integer> elements = new HashMap<>(); //Amount is the column (vertical for matrix)
         HashMap<String, Integer> elementLeft = new HashMap<>();
         HashMap<String, Integer> elementRight = new HashMap<>();
         LinkedList<HashMap<String, Integer>> terms = new LinkedList<>(); //This stores the count of each. is the row for the matrix.
-
-        progress.setIndeterminate(true);
-        progress.setProgress(0);
-        progress.setVisibility(View.VISIBLE);
         boolean leftSide = true;
         boolean hasEqualSign = false;
         for (int i = 0; i < tokens.length; i++)
@@ -32,7 +27,6 @@ public class ChemicalBalancer
                 hasEqualSign = true;
             }
             //Switching over to left side now.
-            progress.incrementProgressBy(1); // update progress bar
             if (Character.isDigit(ch) || Character.isLetter(ch))
             {
                 HashMap<String, Integer> aTerm = new HashMap<String, Integer>();
@@ -78,7 +72,6 @@ public class ChemicalBalancer
                                     } else {
                                         break;
                                     }
-                                    progress.incrementProgressBy(2); // update progress bar
                                 }
 
                                 if (rest.substring(0, subscriptCounter).compareTo("") != 0) {
@@ -105,7 +98,6 @@ public class ChemicalBalancer
                         }
 
                     }
-                    progress.incrementProgressBy(2);
                 }
             }
         }
@@ -134,8 +126,6 @@ public class ChemicalBalancer
         if (elementLeft.size() != elementRight.size())
         {
             System.out.println("Balance Error: Equation must have both elements on left and right");
-            progress.setProgress(0);
-            progress.setBackgroundColor(9); // change progres bar color to red
         }
         int[][] mm = new int[terms.size()][elements.size()];
         for (int i = 0; i < terms.size(); i++)
@@ -147,12 +137,10 @@ public class ChemicalBalancer
                 if (terms.get(i).get(element) == null)
                 {
                     mm[i][j] = 0;
-                    progress.incrementProgressBy(2); // update progress bar
                 }
                 else
                 {
                     mm[i][j] = terms.get(i).get(element);
-                    progress.incrementProgressBy(2); // update progress bar
                 }
                 j++;
             }
@@ -184,12 +172,10 @@ public class ChemicalBalancer
             for (int j = 0; j < ro[0].length; j++)
             {
                 mat.set(i, j, new Fraction(ro[i][j], 1));
-                progress.incrementProgressBy(2); // update progress bar
             }
 
         }
         mat.reducedRowEchelonForm();
-        progress.incrementProgressBy(5);
         boolean unableToBalance = false;
         LinkedList<Integer> balancedValues = new LinkedList<>();
 
@@ -258,16 +244,6 @@ public class ChemicalBalancer
 
             return ret.toString();
         }
-
-        if (progress.getProgress() == progress.getMax())
-        {
-            // set progress bar to green for finish
-            progress.setBackgroundColor(4); // indicates the process is complete
-            progress.setVisibility(View.GONE);
-            // exit the progress bar
-        }
-        // exit the progress bar anyways
-        progress.setVisibility(View.GONE);
         return null;
     }
 
@@ -281,7 +257,6 @@ public class ChemicalBalancer
     public static int lcm(int a, int b)
     {
         return ((a * b) / gcd(a, b));
-
     }
 
     public static int lcmofarray(int[] arr, int start, int end)
