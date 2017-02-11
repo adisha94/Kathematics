@@ -221,7 +221,7 @@ public class MyActivity extends AppCompatActivity
     {
         // have it search wikipedia instead of google if you can
         final EditText inputField = (EditText) findViewById(R.id.inputBox); // the google button box
-        String message = "balence equation " + inputField.getText().toString();
+        String message = "balance equation " + inputField.getText().toString();
         if (message.contains("empty") || message.contains("Empty"))
         {
             Toast.makeText(MyActivity.this, "Use this button search google for an in-depth analysis about the element. ", Toast.LENGTH_SHORT).show();
