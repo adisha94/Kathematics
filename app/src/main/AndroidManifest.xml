@@ -32,5 +32,4 @@
                 android:resource="@xml/second_widget_info" />
         </receiver>
     </application>
-
 </manifest>
