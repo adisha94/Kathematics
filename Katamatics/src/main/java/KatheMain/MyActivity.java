@@ -1,5 +1,7 @@
 package KatheMain; //package com.example.adish.tutorial;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,26 +11,24 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.R;
+import android.widget.Toast;
 
-public class MyActivity extends AppCompatActivity
-{
+public class MyActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
-        {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Snackbar.make(view, "Share with a friend", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -38,17 +38,16 @@ public class MyActivity extends AppCompatActivity
         final TextView textView = (TextView) findViewById(R.id.inputBox);
         Button mainButton = (Button) findViewById(R.id.mainButton);
 
-        mainButton.setOnLongClickListener(new View.OnLongClickListener()
-        {
+        mainButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public boolean onLongClick(View v)
-            {
+            public boolean onLongClick(View v) {
                 return false; // event not handled
             }
         });
 
     }
-//
+
+    //
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu)
 //    {
@@ -74,10 +73,20 @@ public class MyActivity extends AppCompatActivity
 //        return super.onOptionsItemSelected(item);
 //    }
 //
-    public void Enter(View view)
-    {
+    public void Enter(View view) {
 
     }
 
-
+    public void onGoogleButtonClick(View view) {
+        // have it search wikipedia instead of google if you can
+        final EditText inputField = (EditText) findViewById(R.id.inputBox); // the google button box
+        String message = "balance equation " + inputField.getText().toString();
+        if (message.contains("empty") || message.contains("Empty")) {
+            Toast.makeText(MyActivity.this, "Use this button search google for an in-depth analysis about the element. ", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent search = new Intent(Intent.ACTION_WEB_SEARCH); // change from google to wikipedia
+            search.putExtra(SearchManager.QUERY, message);
+            startActivity(search);
+        }
+    }
 }
