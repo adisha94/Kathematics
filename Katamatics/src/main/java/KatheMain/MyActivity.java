@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.R;
+import android.R.id; // in case this is needed
 import android.widget.Toast;
 
 public class MyActivity extends AppCompatActivity
@@ -75,11 +76,7 @@ public class MyActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
-//    public void Enter(View view)
-//    {
-//
-//    }
+    
 
     public void onGoogleButtonClick(View view)
     {
