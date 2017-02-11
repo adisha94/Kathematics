@@ -76,7 +76,7 @@ public class MyActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-    
+
 
     public void onGoogleButtonClick(View view)
     {
